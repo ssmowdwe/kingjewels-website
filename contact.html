@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | KING JEWELS</title>
+  <meta name="description" content="Contact King Jewels — we're here to help with orders, returns, sizing, and everything in between." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .cat-hero { background:linear-gradient(135deg,#081031 0%,#0d1a4a 50%,#081031 100%); padding:120px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .cat-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(41,49,82,0.6) 0%,transparent 70%); }
+    .cat-hero-eyebrow { font-family:'Poppins',sans-serif; font-size:0.7rem; font-weight:500; letter-spacing:0.3em; color:rgba(255,255,255,0.6); text-transform:uppercase; margin-bottom:12px; position:relative; }
+    .cat-hero h1 { font-family:'Montserrat',sans-serif; font-size:clamp(2.5rem,6vw,4.5rem); font-weight:800; color:#ffffff; letter-spacing:0.05em; line-height:1; position:relative; margin-bottom:16px; }
+    .cat-hero p { font-family:'Poppins',sans-serif; font-size:1rem; color:rgba(255,255,255,0.75); max-width:500px; margin:0 auto 32px; position:relative; }
+    .cat-breadcrumb { font-family:'Poppins',sans-serif; font-size:0.75rem; color:rgba(255,255,255,0.5); letter-spacing:0.1em; position:relative; margin-bottom:20px; }
+    .cat-breadcrumb a { color:rgba(255,255,255,0.5); text-decoration:none; }
+    .cat-breadcrumb a:hover { color:#fff; }
+    .cat-breadcrumb span { margin:0 8px; }
+
+    /* Contact page */
+    .contact-section { padding:80px 0; background:#ffffff; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:80px; align-items:start; }
+    @media (max-width:900px) { .contact-grid { grid-template-columns:1fr; gap:48px; } }
+
+    .contact-info h2 { font-family:'Montserrat',sans-serif; font-size:1.8rem; font-weight:800; color:#081031; margin-bottom:16px; }
+    .contact-info > p { font-family:'Poppins',sans-serif; font-size:0.95rem; color:#293152; line-height:1.8; margin-bottom:32px; }
+
+    .contact-item { display:flex; gap:16px; align-items:flex-start; margin-bottom:28px; }
+    .contact-icon { width:44px; height:44px; border-radius:10px; background:#f4f5f8; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+    .contact-detail h4 { font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; color:#081031; letter-spacing:0.08em; margin-bottom:4px; }
+    .contact-detail p, .contact-detail a { font-family:'Poppins',sans-serif; font-size:0.88rem; color:#72778A; text-decoration:none; }
+    .contact-detail a:hover { color:#081031; }
+
+    .contact-hours { margin-top:32px; padding:24px; background:#f4f5f8; border-radius:10px; }
+    .contact-hours h4 { font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; color:#081031; letter-spacing:0.08em; margin-bottom:16px; }
+    .hours-row { display:flex; justify-content:space-between; font-family:'Poppins',sans-serif; font-size:0.85rem; margin-bottom:8px; }
+    .hours-row .day { color:#081031; font-weight:500; }
+    .hours-row .time { color:#72778A; }
+
+    /* Form */
+    .contact-form-wrap { background:#f4f5f8; border-radius:12px; padding:40px; }
+    .contact-form-wrap h3 { font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:700; color:#081031; letter-spacing:0.05em; margin-bottom:28px; }
+    .form-group { margin-bottom:20px; }
+    .form-group label { display:block; font-family:'Poppins',sans-serif; font-size:0.75rem; font-weight:500; color:#081031; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width:100%; padding:12px 16px; border:1.5px solid #d8dbe6; border-radius:6px; background:#ffffff;
+      font-family:'Poppins',sans-serif; font-size:0.9rem; color:#081031; transition:border-color 0.2s; box-sizing:border-box;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { outline:none; border-color:#081031; }
+    .form-group textarea { height:140px; resize:vertical; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    @media (max-width:500px) { .form-row { grid-template-columns:1fr; } }
+    .form-submit { width:100%; padding:16px; background:#081031; color:#fff; border:none; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.15em; cursor:pointer; transition:background 0.2s ease; margin-top:8px; }
+    .form-submit:hover { background:#293152; }
+    .form-note { font-family:'Poppins',sans-serif; font-size:0.75rem; color:#72778A; text-align:center; margin-top:12px; }
+
+    /* FAQ */
+    .faq-section { padding:80px 0; background:#f4f5f8; }
+    .faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:48px; }
+    @media (max-width:768px) { .faq-grid { grid-template-columns:1fr; } }
+    .faq-item { background:#ffffff; border-radius:10px; padding:28px; }
+    .faq-item h4 { font-family:'Montserrat',sans-serif; font-size:0.85rem; font-weight:700; color:#081031; letter-spacing:0.03em; margin-bottom:10px; }
+    .faq-item p { font-family:'Poppins',sans-serif; font-size:0.85rem; color:#72778A; line-height:1.7; margin:0; }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <svg class="loader-ring" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#72778A" stroke-width="2" stroke-dasharray="1,200" stroke-dashoffset="0" stroke-linecap="round" />
+      </svg>
+      <span class="loader-brand">KJ</span>
+    </div>
+  </div>
+
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>FREE SHIPPING ON ORDERS OVER $75</span><span class="ann-sep">·</span>
+      <span>USE CODE <strong>KING10</strong> FOR 10% OFF YOUR FIRST ORDER</span><span class="ann-sep">·</span>
+      <span>BUY NOW, PAY LATER AVAILABLE</span><span class="ann-sep">·</span>
+      <span>FREE SHIPPING ON ORDERS OVER $75</span><span class="ann-sep">·</span>
+      <span>USE CODE <strong>KING10</strong> FOR 10% OFF YOUR FIRST ORDER</span><span class="ann-sep">·</span>
+      <span>BUY NOW, PAY LATER AVAILABLE</span>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="logo"><span class="logo-king">KING</span><span class="logo-jewels">JEWELS</span></a>
+      <nav class="nav" id="desktopNav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="chains.html" class="nav-link">CHAINS</a>
+        <a href="bracelets.html" class="nav-link">BRACELETS</a>
+        <a href="earrings.html" class="nav-link">EARRINGS</a>
+        <a href="rings.html" class="nav-link">RINGS</a>
+        <a href="custom.html" class="nav-link">CUSTOM</a>
+        <a href="contact.html" class="nav-link active">CONTACT</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+        <button class="icon-btn" aria-label="Account"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span class="cart-count" id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="search-inner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search for chains, bracelets, rings..." class="search-input" id="searchInput" />
+        <button class="search-close" id="searchClose" aria-label="Close search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-head">
+      <a href="index.html" class="logo"><span class="logo-king">KING</span><span class="logo-jewels">JEWELS</span></a>
+      <button class="close-btn" id="closeMobileMenu" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+      <a href="chains.html" class="mobile-nav-link">CHAINS</a>
+      <a href="bracelets.html" class="mobile-nav-link">BRACELETS</a>
+      <a href="earrings.html" class="mobile-nav-link">EARRINGS</a>
+      <a href="rings.html" class="mobile-nav-link">RINGS</a>
+      <a href="custom.html" class="mobile-nav-link">CUSTOM</a>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </nav>
+    <div class="mobile-menu-footer"><p>Free shipping over $75 · 1000+ happy customers</p></div>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header"><h3>YOUR CART</h3><button class="cart-close" id="cartClose" aria-label="Close cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="cart-body" id="cartBody"><div class="cart-empty"><p>Your cart is empty</p><a href="index.html" class="btn-primary" style="margin-top:16px;display:inline-block;">SHOP NOW</a></div></div>
+    <div class="cart-footer" id="cartFooter" style="display:none;"><div class="cart-total"><span>TOTAL</span><span id="cartTotal">$0.00</span></div><button class="btn-primary" style="width:100%;">CHECKOUT</button></div>
+  </div>
+
+  <main>
+    <section class="cat-hero">
+      <div class="container">
+        <p class="cat-breadcrumb"><a href="index.html">HOME</a><span>›</span>CONTACT</p>
+        <div class="cat-hero-eyebrow">KING JEWELS SUPPORT</div>
+        <h1>CONTACT US</h1>
+        <p>Questions, custom orders, returns — we've got you. Real people, real responses.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <h2>GET IN TOUCH</h2>
+            <p>We're based in Texas and here to help with anything you need. Whether it's an order question, a sizing issue, or a custom piece request — we'll get back to you fast.</p>
+
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-detail">
+                <h4>EMAIL US</h4>
+                <a href="mailto:support@kingjewels.com">support@kingjewels.com</a>
+                <p>Response within 24 hours</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-detail">
+                <h4>TEXT / DM US</h4>
+                <p>Instagram: @kingjewelstx</p>
+                <p>TikTok: @kingjewelstx</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-detail">
+                <h4>BASED IN</h4>
+                <p>Texas, USA</p>
+                <p>Shipping worldwide</p>
+              </div>
+            </div>
+
+            <div class="contact-hours">
+              <h4>SUPPORT HOURS</h4>
+              <div class="hours-row"><span class="day">Monday – Friday</span><span class="time">9am – 7pm CST</span></div>
+              <div class="hours-row"><span class="day">Saturday</span><span class="time">10am – 5pm CST</span></div>
+              <div class="hours-row"><span class="day">Sunday</span><span class="time">Closed</span></div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h3>SEND US A MESSAGE</h3>
+            <form onsubmit="handleContact(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" placeholder="Julian" required />
+                </div>
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" placeholder="King" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="you@email.com" required />
+              </div>
+              <div class="form-group">
+                <label>Order Number (if applicable)</label>
+                <input type="text" placeholder="KJ-00000" />
+              </div>
+              <div class="form-group">
+                <label>Topic</label>
+                <select required>
+                  <option value="" disabled selected>What can we help with?</option>
+                  <option>Order Status</option>
+                  <option>Returns &amp; Exchanges</option>
+                  <option>Product Question</option>
+                  <option>Custom Order</option>
+                  <option>Sizing Help</option>
+                  <option>Shipping Issue</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea placeholder="Tell us how we can help..." required></textarea>
+              </div>
+              <button type="submit" class="form-submit">SEND MESSAGE →</button>
+              <p class="form-note">We reply within 24 hours · Mon–Sat</p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eye">QUICK ANSWERS</span>
+          <h2 class="section-title">FREQUENTLY ASKED</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>HOW LONG IS SHIPPING?</h4>
+            <p>Standard shipping takes 3–7 business days within the US. Express options are available at checkout. International shipping takes 7–14 days.</p>
+          </div>
+          <div class="faq-item">
+            <h4>WHAT IS YOUR RETURN POLICY?</h4>
+            <p>We accept returns within 30 days of delivery for unworn items in original packaging. Custom and engraved pieces are final sale.</p>
+          </div>
+          <div class="faq-item">
+            <h4>IS THE JEWELRY REAL GOLD?</h4>
+            <p>Our pieces are gold plated (18K or 24K) over a high-quality base metal. We also offer gold vermeil options with a thicker plating layer for longer-lasting wear.</p>
+          </div>
+          <div class="faq-item">
+            <h4>HOW DO I CARE FOR MY JEWELRY?</h4>
+            <p>Store in a cool dry place, avoid water, perfume, and sweat. Polish gently with a soft cloth. Proper care extends the life of your plating significantly.</p>
+          </div>
+          <div class="faq-item">
+            <h4>DO YOU OFFER CUSTOM PIECES?</h4>
+            <p>Yes! We do custom pendants, engravings, iced-out pieces, and more. Visit our Custom Order page or reach out via this form to get started.</p>
+          </div>
+          <div class="faq-item">
+            <h4>CAN I BUY NOW AND PAY LATER?</h4>
+            <p>Yes, we offer Afterpay and Klarna at checkout. Split your purchase into 4 interest-free payments with no credit check required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-king">KING</span><span class="logo-jewels">JEWELS</span></a>
+          <p>Premium jewelry designed in Texas. Built for kings and queens who know their worth.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="social-link" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.29 8.29 0 0 0 4.83 1.54V6.69z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>SHOP</h4><a href="chains.html">Chains</a><a href="bracelets.html">Bracelets</a><a href="earrings.html">Earrings</a><a href="rings.html">Rings</a><a href="custom.html">Custom Orders</a></div>
+        <div class="footer-col"><h4>INFO</h4><a href="contact.html">About Us</a><a href="contact.html">Contact Us</a><a href="#">Sizing Guide</a><a href="#">Care Instructions</a><a href="#">FAQ</a></div>
+        <div class="footer-col"><h4>SUPPORT</h4><a href="#">Shipping Policy</a><a href="#">Returns &amp; Exchanges</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Track Your Order</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 King Jewels. All Rights Reserved. Designed in Texas.</p>
+        <div class="payment-methods"><span class="pay-badge">VISA</span><span class="pay-badge">MC</span><span class="pay-badge">AMEX</span><span class="pay-badge">PayPal</span><span class="pay-badge">Afterpay</span><span class="pay-badge">Klarna</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+  <script>
+    function handleContact(e) {
+      e.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.textContent = "Message sent! We'll get back to you within 24 hours.";
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

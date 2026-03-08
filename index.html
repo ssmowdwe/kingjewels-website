@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KING JEWELS | Premium Jewelry — Designed in Texas</title>
+  <meta name="description" content="Premium gold and diamond jewelry crafted for kings and queens. Shop chains, bracelets, earrings, rings and custom pieces." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Shopify Buy Button SDK -->
+  <script type="text/javascript" src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js" onload="if(window.KJ_SHOPIFY)KJ_SHOPIFY.init()"></script>
+</head>
+<body>
+
+  <!-- ─── PAGE LOADER ─── -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <svg class="loader-ring" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#72778A" stroke-width="2"
+          stroke-dasharray="1,200" stroke-dashoffset="0" stroke-linecap="round" />
+      </svg>
+      <span class="loader-brand">KJ</span>
+    </div>
+  </div>
+
+  <!-- ─── ANNOUNCEMENT BAR ─── -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>FREE SHIPPING ON ORDERS OVER $75</span>
+      <span class="ann-sep">·</span>
+      <span>USE CODE <strong>KING10</strong> FOR 10% OFF YOUR FIRST ORDER</span>
+      <span class="ann-sep">·</span>
+      <span>BUY NOW, PAY LATER AVAILABLE</span>
+      <span class="ann-sep">·</span>
+      <span>FREE SHIPPING ON ORDERS OVER $75</span>
+      <span class="ann-sep">·</span>
+      <span>USE CODE <strong>KING10</strong> FOR 10% OFF YOUR FIRST ORDER</span>
+      <span class="ann-sep">·</span>
+      <span>BUY NOW, PAY LATER AVAILABLE</span>
+    </div>
+  </div>
+
+  <!-- ─── HEADER ─── -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="logo">
+        <span class="logo-king">KING</span><span class="logo-jewels">JEWELS</span>
+      </a>
+
+      <nav class="nav" id="desktopNav">
+        <a href="index.html" class="nav-link active">HOME</a>
+        <a href="chains.html" class="nav-link">CHAINS</a>
+        <a href="bracelets.html" class="nav-link">BRACELETS</a>
+        <a href="earrings.html" class="nav-link">EARRINGS</a>
+        <a href="rings.html" class="nav-link">RINGS</a>
+        <a href="custom.html" class="nav-link">CUSTOM</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Account">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount">2</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="search-inner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" placeholder="Search for chains, bracelets, rings..." class="search-input" id="searchInput" />
+        <button class="search-close" id="searchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── MOBILE MENU ─── -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-head">
+      <a href="index.html" class="logo">
+        <span class="logo-king">KING</span><span class="logo-jewels">JEWELS</span>
+      </a>
+      <button class="close-btn" id="closeMobileMenu" aria-label="Close menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html" class="mobile-nav-link">HOME</a>
+      <a href="chains.html" class="mobile-nav-link">CHAINS</a>
+      <a href="bracelets.html" class="mobile-nav-link">BRACELETS</a>
+      <a href="earrings.html" class="mobile-nav-link">EARRINGS</a>
+      <a href="rings.html" class="mobile-nav-link">RINGS</a>
+      <a href="custom.html" class="mobile-nav-link">CUSTOM</a>
+      <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <p>Free shipping over $75 · 1000+ happy customers</p>
+    </div>
+  </div>
+
+  <!-- ─── CART DRAWER ─── -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>YOUR CART <span id="cartHeaderCount">(2)</span></h3>
+      <button class="close-btn" id="closeCartBtn" aria-label="Close cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <!-- Cart item example (JS will manage this) -->
+      <div class="cart-item">
+        <div class="cart-item-img">
+          <div class="cart-img-placeholder">⛓</div>
+        </div>
+        <div class="cart-item-info">
+          <p class="cart-item-name">Cuban Link Chain</p>
+          <p class="cart-item-variant">18K Gold · 20"</p>
+          <div class="cart-item-price-row">
+            <span class="cart-item-price">$179.99</span>
+            <div class="cart-qty">
+              <button class="qty-btn">−</button>
+              <span>1</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <button class="cart-remove" aria-label="Remove">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item-img">
+          <div class="cart-img-placeholder">💎</div>
+        </div>
+        <div class="cart-item-info">
+          <p class="cart-item-name">Diamond Stud Earrings</p>
+          <p class="cart-item-variant">Gold Plated · VVS</p>
+          <div class="cart-item-price-row">
+            <span class="cart-item-price">$99.99</span>
+            <div class="cart-qty">
+              <button class="qty-btn">−</button>
+              <span>1</span>
+              <button class="qty-btn">+</button>
+            </div>
+          </div>
+        </div>
+        <button class="cart-remove" aria-label="Remove">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>SUBTOTAL</span>
+        <span class="cart-total-price">$279.98</span>
+      </div>
+      <p class="cart-shipping-note">Shipping &amp; taxes calculated at checkout</p>
+      <a href="#" class="btn-primary btn-full">CHECKOUT</a>
+      <button class="btn-outline btn-full" onclick="closeCart()">CONTINUE SHOPPING</button>
+    </div>
+  </div>
+
+  <!-- ─── MAIN CONTENT ─── -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-particles" id="particles"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">PREMIUM JEWELRY · DESIGNED IN TEXAS</p>
+        <h1 class="hero-title">
+          <span class="title-line">REIGN</span>
+          <span class="title-line title-gold">IN GOLD</span>
+        </h1>
+        <p class="hero-subtitle">Crafted for Kings. Built to Last.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary btn-lg">SHOP NOW</a>
+          <a href="#" class="btn-outline-hero btn-lg">CUSTOM ORDER</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="trust-text">
+              <strong>DESIGNED IN TEXAS</strong>
+              <span>Homegrown quality</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="trust-text">
+              <strong>1,000+ CUSTOMERS</strong>
+              <span>Trusted worldwide</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <div class="trust-text">
+              <strong>BUY NOW PAY LATER</strong>
+              <span>Flexible payments</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div class="trust-text">
+              <strong>MONEY BACK GUARANTEE</strong>
+              <span>100% satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">SHOP BY CATEGORY</h2>
+          <p class="section-sub">Explore our collections</p>
+        </div>
+        <div class="categories-grid">
+          <a href="#" class="category-card cat-tall">
+            <div class="cat-bg" style="background:linear-gradient(160deg,#081031 0%,#1a2550 100%)">
+              <div class="cat-icon">⛓</div>
+            </div>
+            <div class="cat-label">
+              <h3>CHAINS</h3>
+              <span>Shop Now →</span>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="cat-bg" style="background:linear-gradient(160deg,#0d1535 0%,#293152 100%)">
+              <div class="cat-icon">📿</div>
+            </div>
+            <div class="cat-label">
+              <h3>BRACELETS</h3>
+              <span>Shop Now →</span>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="cat-bg" style="background:linear-gradient(160deg,#081031 0%,#162048 100%)">
+              <div class="cat-icon">💎</div>
+            </div>
+            <div class="cat-label">
+              <h3>EARRINGS</h3>
+              <span>Shop Now →</span>
+            </div>
+          </a>
+          <a href="#" class="category-card">
+            <div class="cat-bg" style="background:linear-gradient(160deg,#0a1238 0%,#1e2d5e 100%)">
+              <div class="cat-icon">💍</div>
+            </div>
+            <div class="cat-label">
+              <h3>RINGS</h3>
+              <span>Shop Now →</span>
+            </div>
+          </a>
+          <a href="#" class="category-card cat-wide">
+            <div class="cat-bg" style="background:linear-gradient(160deg,#081031 0%,#293152 100%)">
+              <div class="cat-icon">✨</div>
+            </div>
+            <div class="cat-label cat-label-wide">
+              <h3>CUSTOM ORDER</h3>
+              <p>Design your one-of-a-kind piece</p>
+              <span>Get Started →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">FEATURED PIECES</h2>
+          <p class="section-sub">Our most-loved jewelry</p>
+        </div>
+        <div class="products-grid">
+
+          <div class="product-card" data-name="Cuban Link Chain" data-price="179.99">
+            <div class="product-img-wrap">
+              <div class="product-img pimg-1">
+                <div class="pimg-label">⛓ CHAIN</div>
+              </div>
+              <div class="product-badge">BESTSELLER</div>
+              <div class="kj-buy-btn" data-shopify-product="featured-cuban-chain"></div>
+            </div>
+            <div class="product-info">
+              <div class="product-stars">★★★★★ <span class="review-count">(84)</span></div>
+              <h3 class="product-name">Cuban Link Chain</h3>
+              <p class="product-material">18K Gold Plated · VVS Stones</p>
+              <div class="product-price">
+                <span class="price-sale">$179.99</span>
+                <span class="price-orig">$249.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="Tennis Bracelet" data-price="149.99">
+            <div class="product-img-wrap">
+              <div class="product-img pimg-2">
+                <div class="pimg-label">📿 BRACELET</div>
+              </div>
+              <div class="product-badge new-badge">NEW</div>
+              <div class="kj-buy-btn" data-shopify-product="featured-bracelet"></div>
+            </div>
+            <div class="product-info">
+              <div class="product-stars">★★★★★ <span class="review-count">(51)</span></div>
+              <h3 class="product-name">Tennis Bracelet</h3>
+              <p class="product-material">Sterling Silver · CZ Diamonds</p>
+              <div class="product-price">
+                <span class="price-sale">$149.99</span>
+                <span class="price-orig">$199.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="Diamond Stud Earrings" data-price="99.99">
+            <div class="product-img-wrap">
+              <div class="product-img pimg-3">
+                <div class="pimg-label">💎 EARRINGS</div>
+              </div>
+              <div class="kj-buy-btn" data-shopify-product="featured-earrings"></div>
+            </div>
+            <div class="product-info">
+              <div class="product-stars">★★★★☆ <span class="review-count">(37)</span></div>
+              <h3 class="product-name">Diamond Stud Earrings</h3>
+              <p class="product-material">Gold Plated · VVS Moissanite</p>
+              <div class="product-price">
+                <span class="price-current">$99.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="Rope Chain Necklace" data-price="129.99">
+            <div class="product-img-wrap">
+              <div class="product-img pimg-4">
+                <div class="pimg-label">⛓ ROPE CHAIN</div>
+              </div>
+              <div class="product-badge">SALE</div>
+              <div class="kj-buy-btn" data-shopify-product="featured-rope-chain"></div>
+            </div>
+            <div class="product-info">
+              <div class="product-stars">★★★★★ <span class="review-count">(62)</span></div>
+              <h3 class="product-name">Rope Chain Necklace</h3>
+              <p class="product-material">24K Gold Plated · 5mm Width</p>
+              <div class="product-price">
+                <span class="price-sale">$129.99</span>
+                <span class="price-orig">$179.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="Signet Ring" data-price="89.99">
+            <div class="product-img-wrap">
+              <div class="product-img pimg-5">
+                <div class="pimg-label">💍 RING</div>
+              </div>
+              <div class="product-badge new-badge">NEW</div>
+              <div class="kj-buy-btn" data-shopify-product="featured-signet-ring"></div>
+            </div>
+            <div class="product-info">
+              <div class="product-stars">★★★★★ <span class="review-count">(29)</span></div>
+              <h3 class="product-name">Signet Ring</h3>
+              <p class="product-material">Gold Vermeil · Custom Engraving</p>
+              <div class="product-price">
+                <span class="price-current">$89.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-name="King Pendant" data-price="219.99">
+            <div class="product-img-wrap">
+              <div class="product-img pimg-6">
+                <div class="pimg-label">👑 PENDANT</div>
+              </div>
+              <div class="kj-buy-btn" data-shopify-product="featured-pendant"></div>
+            </div>
+            <div class="product-info">
+              <div class="product-stars">★★★★★ <span class="review-count">(118)</span></div>
+              <h3 class="product-name">King Crown Pendant</h3>
+              <p class="product-material">18K Gold Plated · VVS Stones</p>
+              <div class="product-price">
+                <span class="price-sale">$219.99</span>
+                <span class="price-orig">$299.99</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="section-cta">
+          <a href="#" class="btn-primary">VIEW ALL PRODUCTS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="brand-section">
+      <div class="container">
+        <div class="brand-inner">
+          <div class="brand-visual">
+            <div class="brand-rings">
+              <div class="brand-ring br-1"></div>
+              <div class="brand-ring br-2"></div>
+              <div class="brand-ring br-3"></div>
+            </div>
+            <div class="brand-monogram">KJ</div>
+          </div>
+          <div class="brand-text">
+            <span class="brand-eyebrow">OUR STORY</span>
+            <h2 class="brand-title">CRAFTED FOR<br />ROYALTY</h2>
+            <p>King Jewels was born in Texas with one mission — bring premium jewelry to everyone. We believe you shouldn't have to compromise on quality or break the bank to wear something truly royal.</p>
+            <p>Every piece is hand-selected, plated in real gold, and built to withstand your lifestyle. From Cuban links to custom pendants, we've got your crown.</p>
+            <a href="#" class="btn-gold">OUR STORY →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">WHAT KINGS SAY</h2>
+          <div class="aggregate-rating">
+            <span class="stars-gold">★★★★★</span>
+            <span class="rating-text">4.9 / 5 &nbsp;·&nbsp; 1,200+ verified reviews</span>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-body">"The Cuban link chain is absolutely stunning. Everyone keeps asking where I got it from. Quality is incredible for the price — looks like I spent 10x more."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">M</div>
+              <div class="reviewer-info">
+                <strong>Marcus T.</strong>
+                <span>Verified Buyer · Dallas, TX</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-body">"Fast shipping, gorgeous packaging, and the bracelet is even better in person. King Jewels never disappoints. This is my 4th purchase and won't be my last."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">J</div>
+              <div class="reviewer-info">
+                <strong>Jordan K.</strong>
+                <span>Verified Buyer · Houston, TX</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-body">"Got a custom pendant done and it came out exactly how I wanted. The team was super responsive, quality exceeded my expectations. 100% recommend."</p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">A</div>
+              <div class="reviewer-info">
+                <strong>Andre W.</strong>
+                <span>Verified Buyer · Austin, TX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-inner">
+          <h2>JOIN THE ROYAL FAMILY</h2>
+          <p>Early access to new drops, exclusive deals, and 10% off your first order.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="YOUR EMAIL ADDRESS" class="newsletter-input" required />
+            <button type="submit" class="btn-primary">SUBSCRIBE</button>
+          </form>
+          <p class="newsletter-fine">No spam. Unsubscribe anytime. We hate spam too.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-king">KING</span><span class="logo-jewels">JEWELS</span>
+          </a>
+          <p>Premium jewelry designed in Texas. Built for kings and queens who know their worth.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.29 8.29 0 0 0 4.83 1.54V6.69z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>SHOP</h4>
+          <a href="#">Chains</a>
+          <a href="#">Bracelets</a>
+          <a href="#">Earrings</a>
+          <a href="#">Rings</a>
+          <a href="#">Custom Orders</a>
+          <a href="#">Sale</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>INFO</h4>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Sizing Guide</a>
+          <a href="#">Care Instructions</a>
+          <a href="#">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>SUPPORT</h4>
+          <a href="#">Shipping Policy</a>
+          <a href="#">Returns &amp; Exchanges</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Track Your Order</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 King Jewels. All Rights Reserved. Designed in Texas.</p>
+        <div class="payment-methods">
+          <span class="pay-badge">VISA</span>
+          <span class="pay-badge">MC</span>
+          <span class="pay-badge">AMEX</span>
+          <span class="pay-badge">PayPal</span>
+          <span class="pay-badge">Afterpay</span>
+          <span class="pay-badge">Klarna</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+  <!-- Shopify Buy Button Integration -->
+  <script src="shopify.js"></script>
+</body>
+</html>
